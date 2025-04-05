@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Switcher</title>
+    <link rel="stylesheet" href="">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(180deg, hsl(560, 50%, 75%), hsl(690, 50%, 90%));
+}
+
+.weather-app {
+    text-align: center;
+}
+
+.city-selector {
+    margin-bottom: 20px;
+}
+
+.city-button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 2rem;
+    border-radius: 5px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.city-button:hover{
+    transform: scaley(1.1);
+    background: #0056b3;
+
+}
+
+.city-button:focus {
+    background: #0c005b;
+    outline: none;
+}
+
+.weather-card {
+    padding: 50px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background: linear-gradient(to right,skyblue,rgb(39, 39, 172), rgb(101, 101, 255));
+    width: auto;
+    max-width: 400px;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s;
+    transition: transform 0.4s;
+}
+.weather-card:hover{
+    transform: scale(1.1);
+}
+.weather-card.fade-in {
+    opacity: 1;
+}
+
+h2, p {
+    margin: 10px 0;
+}
+
+</style>
+
+</head>
+<body>
+    <div class="weather-app">
+        <div class="city-selector">
+            <button class="city-button" data-city="Tokyo">Tokyo</button>
+            <button class="city-button" data-city="London">London</button>
+            <button class="city-button" data-city="Sydney">Sydney</button>
+        </div>
+        <div class="weather-card">
+            <h2 class="city-name">Select a city</h2>
+            <p class="temperature"></p>
+            <p class="condition"></p>
+        </div>
+    </div>
+    <script src="script2.js"></script>
+</body>
+</html>
